@@ -74,7 +74,7 @@ export class ZitadelIntrospectionStrategy extends Strategy {
   ): Promise<void> {
     const authHeader = req.headers?.authorization;
     if (!authHeader || !authHeader.toLowerCase().startsWith("bearer ")) {
-      this.fail({ message: "No bearer token found in authorization header" });
+      this.fail({ message: "No bearer token found" });
       return;
     }
 
